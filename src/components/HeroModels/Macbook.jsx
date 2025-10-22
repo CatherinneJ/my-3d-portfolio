@@ -1,7 +1,7 @@
 import {useGLTF, useTexture} from '@react-three/drei'
 
 export function Macbook(props) {
-  const { nodes, materials } = useGLTF('models/macbook.glb');
+  const { nodes, materials } = useGLTF(import.meta.env.BASE_URL + 'models/macbook.glb');
 
   return (
     <group {...props} dispose={null}>
@@ -19,4 +19,4 @@ export function Macbook(props) {
   )
 }
 
-useGLTF.preload('models/macbook.glb')
+useGLTF.preload(import.meta.env.BASE_URL + 'models/macbook.glb')

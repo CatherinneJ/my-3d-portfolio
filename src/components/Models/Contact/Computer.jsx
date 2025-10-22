@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 
 export function Computer(props) {
-    const { nodes, materials } = useGLTF(
+    const { nodes, materials } = useGLTF(import.meta.env.BASE_URL +
         "/models/computer-optimized-transformed.glb"
     );
 
